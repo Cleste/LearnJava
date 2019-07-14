@@ -17,7 +17,7 @@ class Help {
         return !(ch < '1' | ch > '7' & ch != 'q');
     }
 
-    static void showmenu(int choice){
+    static void showmenu(int choice) {
         switch (choice) {
             case '1':
                 System.out.println("Oпepaтop if:\n");

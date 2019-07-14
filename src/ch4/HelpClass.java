@@ -15,7 +15,7 @@ public class HelpClass {
                 } while (ignore != '\n');
             } while (!Help.isvalid(choice));
 
-            if(choice == 'q') break;
+            if (choice == 'q') break;
 
             System.out.println();
 
