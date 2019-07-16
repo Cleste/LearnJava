@@ -26,10 +26,10 @@ public class EncodeDemo {
 class Encoder {
     //Encode and decode do the same thing, so that the reason why they in the same method.
     static String encode(String msg, int key) {
-        String encd_msg = "";
+        String encdMsg = "";
         for (int i = 0; i < msg.length(); i++) {
-            encd_msg += (char) (msg.charAt(i) ^ key);
+            encdMsg += (char) (msg.charAt(i) ^ key);
         }
-        return encd_msg;
+        return encdMsg;
     }
 }

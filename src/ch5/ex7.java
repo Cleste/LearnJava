@@ -1,6 +1,6 @@
 package ch5;
 
-public class ex_7 {
+public class ex7 {
     public static void main(String[] args) {
         String msg = "Message for test";
         String encd;
@@ -25,13 +25,13 @@ public class ex_7 {
 class String_Encoder {
     //Encode and decode do the same thing, so that the reason why they in the same method.
     static String encode(String msg, String key) {
-        String encd_msg = "";
+        String encdMsg = "";
         int j = 0;
         for (int i = 0; i < msg.length(); i++) {
-            encd_msg += (char) (msg.charAt(i) ^ key.charAt(j));
+            encdMsg += (char) (msg.charAt(i) ^ key.charAt(j));
             j++;
             if (j == 8) j = 0;
         }
-        return encd_msg;
+        return encdMsg;
     }
 }

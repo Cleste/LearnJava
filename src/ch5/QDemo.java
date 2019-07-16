@@ -19,20 +19,20 @@ public class QDemo {
     }
 }
 class Queue {
-    private char[] q;
+    private char[] queueArr;
     private int put_num, get_num;
     Queue(int size) {
-        q = new char[size + 1];
+        queueArr = new char[size + 1];
         put_num = get_num = 0;
     }
     void put(char sumb){
-        if(put_num == q.length - 1){
+        if(put_num == queueArr.length - 1){
             System.out.println("Очередь заполнена.");
             return;
         }
 
         put_num++;
-        q[put_num] = sumb;
+        queueArr[put_num] = sumb;
     }
     char get(){
         if(get_num == put_num){
@@ -41,10 +41,10 @@ class Queue {
         }
 
         get_num++;
-        return q[get_num];
+        return queueArr[get_num];
     }
 
     void showQueue(){
-        for (char x:q) System.out.print(x);
+        for (char x:queueArr) System.out.print(x);
     }
 }

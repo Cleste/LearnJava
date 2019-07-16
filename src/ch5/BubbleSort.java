@@ -1,6 +1,6 @@
 package ch5;
 
-public class Bubble_sort {
+public class BubbleSort {
     public static void main(String[] args) {
         int[] nums = {23, 2134, -234, 3421, 32,
                 3, 13241, 0, -23, -6};

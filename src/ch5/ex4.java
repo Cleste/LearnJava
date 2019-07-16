@@ -1,6 +1,6 @@
 package ch5;
 
-public class ex_4 {
+public class ex4 {
     public static void main(String[] args) {
         String[] arr = {"Hi, ", "It ", "Is ", "Bubble ", "Sort "};
         String swap;

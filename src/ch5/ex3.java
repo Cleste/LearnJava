@@ -1,6 +1,6 @@
 package ch5;
 
-public class ex_3 {
+public class ex3 {
     public static void main(String[] args) {
         double[] nums = {10.23, 234.23, 123.0, -32.23, 233.23, 23.23,
                 23145.546, 7765.54, 457.645, 95403.344};

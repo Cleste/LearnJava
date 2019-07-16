@@ -20,8 +20,8 @@ public class ShowBitsDemo {
 class ShowBits {
     private int numbits; //variable for the number of bits
 
-    ShowBits(int n) {
-        numbits = n;
+    ShowBits(int num) {
+        numbits = num;
     }
 
     void show(long val) {
