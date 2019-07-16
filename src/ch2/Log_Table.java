@@ -2,24 +2,16 @@ package ch2;
 
 public class Log_Table {
     public static void main(String[] args) {
-        boolean p, q;
+
         System.out.println("P\tQ\tAND\tOR\tXOR\tNOT");
 
-        p = false;
-        q = false;
-        Table(p, q);
+        Table(false, false);
 
-        p = false;
-        q = true;
-        Table(p, q);
+        Table(false, true);
 
-        p = true;
-        q = false;
-        Table(p, q);
+        Table(true, false);
 
-        p = true;
-        q = true;
-        Table(p, q);
+        Table(true, true);
     }
 
     private static void Table(boolean p, boolean q) {
