@@ -1,4 +1,6 @@
 package ch6;
+/*Напишите рекурсивный метод, отображающий символы, составляющие строку в
+обратном порядке.*/
 
 public class ReverseDemo {
     public static void main(String[] args) {
