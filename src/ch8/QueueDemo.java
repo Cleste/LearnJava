@@ -34,7 +34,7 @@ public class QueueDemo {
         queue1.reset();
         queue1.fillQueue();
         queue2.fillQueue(10, 20);
-        queueCopy(queue1, queue2);
+        queueCopy(queue2, queue1);
         queue1.showContent();
         queue2.showContent();
     }
