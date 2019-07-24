@@ -22,7 +22,7 @@ public class DynamicCircularQueue extends MasterQueue implements ICharQ {
     public char get() {
         if (getGetIndex() == getPutIndex()) {
             messageList("err02");
-            return (char) 0;
+            return '0';
         }
         incGetInd();
         if (getGetIndex() == getQueueArr().length) setGetIndex(0);

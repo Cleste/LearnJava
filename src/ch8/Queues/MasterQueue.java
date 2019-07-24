@@ -14,16 +14,20 @@ public abstract class MasterQueue {
     }
     public void showContent() {
         messageList("Nqm1");
-        for (int i = 0; i < queueArr.length; i++) {
-
+        while (getGetIndex() != getPutIndex()){
             System.out.print(get() + " ");
         }
         System.out.println();
     }
 
 
-    public void showContent(int from, int to) {
-        for (int i = from; i < to; i++) System.out.print(get() + " ");
+    public void showContent(int to) {
+        messageList("Nqm1");
+        int i = 0;
+        while (getGetIndex() != getPutIndex() & i < to){
+            System.out.print(get() + " ");
+            i++;
+        }
         System.out.println();
     }
 
@@ -74,7 +78,7 @@ public abstract class MasterQueue {
     }
 
     public void fillQueue(int from, int to) {
-        for (int i = 0; i < to; i++) {
+        for (int i = 0; i < to - from; i++) {
             put((char) (i + 'A' + from));
         }
     }
@@ -95,7 +99,7 @@ public abstract class MasterQueue {
         copyHere.setQueueArr(arrCopy(copyFrom.getQueueArr()));
         copyHere.setGetIndex(copyFrom.getGetIndex());
         copyHere.setPutIndex(copyFrom.getPutIndex());
-        System.out.println("Content of " + copyFrom.name + " queue copied to " + copyHere.name + " queue");
+        System.out.println("\nContent of " + copyFrom.name + " queue copied to " + copyHere.name + " queue");
     }
 
     public static char[] arrCopy(char[] copyFrom) {

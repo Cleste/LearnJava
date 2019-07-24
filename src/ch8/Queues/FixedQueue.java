@@ -18,7 +18,7 @@ public class FixedQueue extends MasterQueue implements ICharQ{
     public char get() {
         if (getGetIndex() == getPutIndex()) {
             messageList("err02");
-            return (char) 0;
+            return '0';
         }
         incGetInd();
         return getQueueArr()[getGetIndex()];
