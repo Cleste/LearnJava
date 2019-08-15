@@ -1,0 +1,47 @@
+#if
+Operator "if":
+if(condition){
+    body
+}else {
+    body
+}
+
+#switch
+Operator 'switch':
+switch (expression) {
+    case: constant 1:
+        body;
+        break;
+    ...
+    case: constant n:
+        body;
+        break;
+    default:
+        body;
+}
+
+#for
+cycle "for":
+for (initialization; condition; iteration) {
+    body
+}
+
+#while
+Cycle 'while':
+while (condition) {
+    body
+}
+
+#dowhile
+Operator do - 'while'
+do {
+    body
+} while (condition);
+
+#break
+Operator break:
+break; or break mark;
+
+#continue
+Operator continue:
+continue; or continue mark;
