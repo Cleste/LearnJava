@@ -1,7 +1,5 @@
 package ch11;
 
-import sun.rmi.server.Activation$ActivationSystemImpl_Stub;
-
 class SumArray {
     private int sum;
 
