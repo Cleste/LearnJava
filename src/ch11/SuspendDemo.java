@@ -1,14 +1,13 @@
 package ch11;
 
 
-import com.sun.xml.internal.ws.policy.SimpleAssertion;
 
-class SusspedThread implements Runnable {
+class SuspendThread implements Runnable {
     Thread thread;
 
     private volatile boolean suspend, stopped;
 
-    SusspedThread(String name) {
+    SuspendThread(String name) {
         thread = new Thread(this, name);
         stopped = false;
         suspend = false;
@@ -57,7 +56,7 @@ class SusspedThread implements Runnable {
 
 public class SuspendDemo {
     public static void main(String[] args) {
-        SusspedThread stream = new SusspedThread("Stream #1");
+        SuspendThread stream = new SuspendThread("Stream #1");
         try {
             Thread.sleep(1000);
 
