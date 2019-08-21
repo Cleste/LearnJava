@@ -11,11 +11,10 @@ class TickTock {
         }
 
         System.out.print("Tick ");
-        state = "ticked";
-
-        notify();
-
         try {
+            Thread.sleep(500);
+            state = "ticked";
+            notify();
             while (!state.equals("tocked")) {
                 wait();
             }
@@ -32,10 +31,13 @@ class TickTock {
         }
 
         System.out.println("Tock");
-        state = "tocked";
-        notify();
-
         try {
+
+            Thread.sleep(500);
+            state = "tocked";
+            notify();
+
+
             while (!state.equals("ticked")) {
                 wait();
             }
@@ -59,11 +61,11 @@ class TickTockThread implements Runnable {
     public void run() {
         switch (thread.getName()) {
             case "Tick":
-                for (int i = 0; i < 5; i++) tickTockObj.tick(true);
+                for (int i = 0; i < 60; i++) tickTockObj.tick(true);
                 tickTockObj.tick(false);
                 break;
             case "Tock":
-                for (int i = 0; i < 5; i++) tickTockObj.tock(true);
+                for (int i = 0; i < 60; i++) tickTockObj.tock(true);
                 tickTockObj.tock(false);
                 break;
 
@@ -85,7 +87,7 @@ public class ThreadCom {
         try {
             tickStream.getThread().join();
             tockStream.getThread().join();
-        }catch (InterruptedException exc){
+        } catch (InterruptedException exc) {
             System.out.println("Main stream interrupted.");
         }
     }
